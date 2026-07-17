@@ -1,0 +1,42 @@
+:root {
+  --void: #080808;
+  --void-2: #111110;
+  --void-3: #1a1a18;
+  --snow: #f2f0eb;
+  --dust: #888480;
+  --mist: #3a3a37;
+  --lime: #c8ff00;
+  --danger: #ff4d4d;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--void);
+  color: var(--snow);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+#root { min-height: 100vh; }
+
+button, input, textarea { font-family: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
